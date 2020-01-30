@@ -10,6 +10,7 @@ class Expenses(Base):
     product = Column(String(30), name="Product")
     price = Column(Float, name="Price")
     date_added = Column(DateTime, name="DateAdded")
+    category = Column(String(30), name="Category")
 
     def __repr__(self):
         return f"Expense: {self.id}, product {self.product}, price: {self.price}, date added: {self.date_added}"
