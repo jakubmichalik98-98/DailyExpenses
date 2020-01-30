@@ -17,6 +17,8 @@ class Expenses(Base):
 
 
 if __name__ == '__main__':
-    engine = create_engine("sqlite:///:memory:", echo=True)
+    engine = create_engine("mysql+pymysql://MY_CHANGES", echo=True)
+    engine.execute("USE dailyExpenses")
     Base.metadata.create_all(engine)
+
 
